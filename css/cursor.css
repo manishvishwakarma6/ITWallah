@@ -1,0 +1,17 @@
+ /* Custom cursor dot */
+        .cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 15px;
+            /* size of the dot */
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            pointer-events: none;
+            /* so it doesn’t block clicks */
+            transform: translate(-50%, -50%);
+            transition: transform 0.05s linear;
+            /* smooth movement */
+            z-index: 9999;
+        }
