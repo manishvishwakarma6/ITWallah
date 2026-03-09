@@ -871,8 +871,46 @@
     <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
     <script src="js/home-sections.js"></script>
-
+<script type="text/javascript">
+		document.onkeydown = function (event) {
+		     event = (event || window.event);
+		     if (event.keyCode == 123 || event.keyCode == 18)
+		     {
+		           return false;
+		     }else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+		         return false;
+		     }
+		}
+		document.addEventListener('contextmenu', event => event.preventDefault());
+		
+		/* ================= KEYBOARD BLOCK ================= */
+		document.addEventListener('keydown', function (e) {
+ 
+		    // Block ALL keys
+		    e.preventDefault();
+		    return false;
+ 
+		}, true);
+		
+		// Disable text selection
+		document.addEventListener('selectstart', function (e) {
+		    e.preventDefault();
+		    return false;
+		});
+ 
+		// Disable drag
+		document.addEventListener('dragstart', function (e) {
+		    e.preventDefault();
+		    return false;
+		});
+		
+		// Block common devtool focus tricks
+		window.addEventListener('blur', function () {
+		    window.focus();
+		});
+	</script>
 
 </body>
 
 </html>
+
