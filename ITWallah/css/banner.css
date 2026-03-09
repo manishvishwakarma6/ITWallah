@@ -1,0 +1,12 @@
+  /* Start Slider css */
+        .banner-img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* optional max width for large screens */
+        .banner-container {
+            max-width: 1584px;
+            margin: auto;
+        }
+        /* End Slider css*/
