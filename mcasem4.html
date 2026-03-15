@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCA Semester 4 - IT Wallah</title>
+    <!-- Font Awesome for Top Header -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/cursor.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/courses.css" rel="stylesheet">
+     <link href="css/mca.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css"/>
+
+</head>
+
+<body>
+    <!-- start Cursor Dot with mouse arrow -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <!-- end Cursor Dot with mouse arrow-->
+
+    <!-- STICKY WRAPPER: Makes both header and navbar fixed at the top together -->
+    <div class="sticky-top-wrapper" style="position: sticky; top: 0; z-index: 1050; width: 100%;">
+
+        <!-- TOP HEADER START -->
+        <div class="top-header-wrapper">
+            <header class="header-slider">
+                <div class="slider-track" id="header-track">
+                    <div class="slide">
+                        <div class="slide-text">
+                            Welcome to IT Wallah – Learn Coding, Modern Technology, Computer Troubleshooting, and
+                            Explore
+                            Helpful Tech Blogs.
+                        </div>
+                        <div class="social-links">
+                            <a href="https://itwallah.in"><i class="fa-solid fa-globe"></i></a>
+                            <a href="https://youtube.com/@ITWallah6" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="https://facebook.com/ITWallah6" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://instagram.com/itwallah6" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://t.me/ITWallah6" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                            <a href="https://twitter.com/ITWallah6" target="_blank"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- TOP HEADER END -->
+
+        <!-- ========== -->
+
+        <!-- NAVBAR START -->
+        <nav class="navbar navbar-expand-xl custom-navbar" id="navbar">
+            <div class="container-fluid px-4 px-xl-5">
+                <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
+                    <div class="navbar__left d-flex align-items-center">
+                        <!-- Company Logo -->
+                        <a class="navbar-brand m-0 pe-2" href="#">
+                            <span class="logo-icon">
+                                <img src="./images/logo.png" alt="IT Wallah Logo" class="custom-logo">
+                            </span>
+                            <span class="d-none d-sm-inline">IT Wallah</span>
+                            <span class="d-inline d-sm-none">IT Wallah</span>
+                        </a>
+                    </div>
+
+
+                    <!-- All Courses Button with Single Box Submenu -->
+                    <div class="dropdown custom-dropdown-box mt-2 mt-sm-0 ms-0 ms-sm-3">
+                        <button class="btn btn-all-courses dropdown-toggle d-flex align-items-center gap-2"
+                            type="button" id="allCoursesBtn" data-bs-toggle="dropdown" aria-expanded="false"
+                            data-bs-auto-close="outside">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                            <span class="d-none d-md-inline text-nowrap">All Courses</span>
+                            <span class="d-inline d-md-none text-nowrap">Courses</span>
+                        </button>
+                        <!-- ONE SINGLE BOX -->
+                        <div class="dropdown-menu single-box-menu mt-3" aria-labelledby="allCoursesBtn">
+                            <h6 class="dropdown-header mb-1">Course Categories</h6>
+
+                            <div class="accordion accordion-flush custom-accordion" id="coursesAccordion">
+                                <!-- Category 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            AI & Machine Learning
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#coursesAccordion">
+                                        <div class="accordion-body p-0">
+                                            <ul class="list-unstyled mb-0">
+                                                <li><a class="dropdown-item sub-item" href="#">AI Fundamentals</a></li>
+                                                <li><a class="dropdown-item sub-item" href="#">Machine Learning</a></li>
+                                                <li><a class="dropdown-item sub-item" href="#">Face Detection</a></li>
+                                                <li><a class="dropdown-item sub-item" href="#">ChatBot Development</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Category 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Web Development
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#coursesAccordion">
+                                        <div class="accordion-body p-0">
+                                            <ul class="list-unstyled mb-0">
+                                                <li><a class="dropdown-item sub-item" href="#">Web RTC & Web Socket</a>
+                                                </li>
+                                                <li><a class="dropdown-item sub-item" href="#">Detection</a></li>
+                                                <li><a class="dropdown-item sub-item" href="#">PDF Viewer</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Category 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Data Science
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#coursesAccordion">
+                                        <div class="accordion-body p-0">
+                                            <ul class="list-unstyled mb-0">
+                                                <li><a class="dropdown-item sub-item" href="#">Data Analysis</a></li>
+                                                <li><a class="dropdown-item sub-item" href="#">Python for Data</a></li>
+                                                <li><a class="dropdown-item sub-item" href="#">SQL & Databases</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Left Group -->
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
+                    <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+                <!-- Navbar Links and Nav Actions -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <div class="navbar__center mx-auto mt-4 mt-xl-0">
+                        <div class="nav-pill-wrapper d-xl-flex">
+                            <ul class="navbar-nav align-items-xl-center">
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="courses.html">Courses</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCase"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        data-bs-auto-close="outside">
+                                        Tutorials
+                                    </a>
+                                    <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdownCase">
+                                        <li><a class="dropdown-item" href="#">Java</a></li>
+                                        <li><a class="dropdown-item" href="#">Python</a></li>
+
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarSubSubDropdown"
+                                                role="button" aria-expanded="false">
+                                                SQL & Pl-SQL
+                                            </a>
+                                            <ul class="dropdown-menu border-0" aria-labelledby="navbarSubSubDropdown">
+                                                <li><a class="dropdown-item" href="#">SQL</a></li>
+                                                <li><a class="dropdown-item" href="#">PL-SQL</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">MySQL</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blogs.html">Blogs</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCase"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        data-bs-auto-close="outside">
+                                        Study Notes
+                                    </a>
+                                    <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdownCase">
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarSubSubDropdown"
+                                                role="button" aria-expanded="false">
+                                                MCA Notes
+                                            </a>
+                                            <ul class="dropdown-menu border-0" aria-labelledby="navbarSubSubDropdown">
+                                                <li><a class="dropdown-item" href="mcasem1.html">Semeter I</a></li>
+                                                <li><a class="dropdown-item" href="mcasem2.html">Semeter II</a></li>
+                                                <li><a class="dropdown-item" href="mcasem3.html">Semeter III</a></li>
+                                                <li><a class="dropdown-item" href="mcasem4.html">Semeter IV</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCase" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                        Gallery
+                                    </a>
+                                    <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdownCase">
+                                        <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                                        <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                                        <li><a class="dropdown-item" href="memory.html">Memories</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="navbar__right mt-4 mt-xl-0 btn-book-wrapper">
+                        <!-- Light/Dark Mode Switch -->
+                        <div class="theme-toggle">
+                            <label class="theme-toggle-switch">
+                                <input type="checkbox" id="themeSwitch">
+                                <span class="theme-toggle-slider">
+                                    <span class="theme-toggle-icon">☀️</span>
+                                    <span class="theme-toggle-icon">🌙</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <a href="contact.html" class="btn-book">
+                            Get In Touch
+                            <span class="icon-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="19" x2="19" y2="5"></line>
+                                    <polyline points="9 5 19 5 19 15"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR END -->
+
+    </div>
+    <!-- STICKY WRAPPER END -->
+           <!-- Page Header -->
+    <section class="page-header" style="padding-top: 40px;">
+        <div class="container">
+            <div class="text-start mb-4">
+                <a href="index.html" class="text-white text-decoration-none fw-bold" style="font-size: 1.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Home</a>
+                <span class="text-white fw-bold mx-2" style="font-size: 1.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">/</span>
+                <a href="mcasem1.html" class="text-white text-decoration-none fw-bold" style="font-size: 1.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">MCA</a>
+                <span class="text-white fw-bold mx-2" style="font-size: 1.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">/</span>
+                <a href="mcasem4.html" class="text-white text-decoration-none fw-bold" style="font-size: 1.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">MCA Sem-IV</a>
+            </div>
+            <h1>MCA Semester 4</h1>
+            <p>Semester-wise Notes, Subjects & Downloadable Study Materials for MCA Students.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="container py-5">
+        <div class="row g-4 justify-content-center">
+            <!-- Big Data Analytics -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="subject-card" onclick="loadSubjectData('Big Data Analytics')">
+                    <div class="subject-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h4>Big Data Analytics</h4>
+                    <p>Select a Unit to view and download notes.</p>
+                    <button class="btn btn-download">View Data</button>
+                </div>
+            </div>
+            <!-- Block Chaining & cyptoCurrency -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="subject-card" onclick="loadSubjectData('Block Chaining & cyptoCurrency')">
+                    <div class="subject-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h4>Block Chaining & cyptoCurrency</h4>
+                    <p>Select a Unit to view and download notes.</p>
+                    <button class="btn btn-download">View Data</button>
+                </div>
+            </div>
+            <!-- Cloud Computing Technologies -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="subject-card" onclick="loadSubjectData('Cloud Computing Technologies')">
+                    <div class="subject-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h4>Cloud Computing Technologies</h4>
+                    <p>Select a Unit to view and download notes.</p>
+                    <button class="btn btn-download">View Data</button>
+                </div>
+            </div>
+            <!-- HandWritten -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="subject-card" onclick="loadSubjectData('HandWritten')">
+                    <div class="subject-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h4>HandWritten</h4>
+                    <p>Select a Unit to view and download notes.</p>
+                    <button class="btn btn-download">View Data</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DataTable Container -->
+        <div id="tableContainer">
+            <div class="table-responsive">
+                <h3 id="tableTitle" class="mb-4 text-center" style="color: #6358e1;">Subject Data</h3>
+                <table id="DataTable" class="display nowrap stripe hover" style="width:100%">
+                   <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Course Name</th>
+                            <th>Unit No</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+<!-- FOTTER SATRT -->
+
+    <footer class="footer-section pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <!-- Links -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <h5 class="footer-title">Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="mcasem1.html">Study Notes</a></li>
+                        <li><a href="awards.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Get In Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <h5 class="footer-title">Courses & Tutorials</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+                </div>
+
+            
+                <!-- Blogs -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <h5 class="footer-title">Blogs</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Face Detection</a></li>
+                        <li><a href="#">Zoho Book Invoice</a></li>
+                        <li><a href="#">ChatBot</a></li>
+                    </ul>
+                </div>
+
+                 <!-- Tutorials -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <h5 class="footer-title">Study Notes</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="mcasem1.html">MCA 1st sem</a></li>
+                        <li><a href="mcasem2.html">MCA 2nd Sem</a></li>
+                        <li><a href="mcasem3.html">MCA 3rd Sem</a></li>
+                        <li><a href="mcasem4.html">MCA 4th Sem</a></li>
+                    </ul>
+                </div>
+
+                <!-- Gallery -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <h5 class="footer-title">Gallery</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="awards.html">Awards</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="memory.html">Memories</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-2 col-md-4 col-12 mb-4">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="social-icons mb-3">
+                        <a href="https://itwallah.in"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.youtube.com/@ITWallah6"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/er-manish-kumar695179/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/itwallah6"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/ITWallah6"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@ITWallah6"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/ITWallah6"><i class="fab fa-twitter"></i></a>
+                    </div>
+
+                    <div class="gmail">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa-solid fa-location-arrow"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center copyright">
+                Copyright 2026. IT Wallah All rights reserved |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms and Conditions</a>
+            </div>
+        </div>
+
+    </footer>
+    <!-- FOTTER END -->
+    <!-- ========== -->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/home-sections.js"></script>
+
+    <!-- jQuery + DataTables JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+    <script>
+        let dataTableInstance;
+        const subjectData = {
+            'Big Data Analytics': [
+                [1, 'Big Data Analytics', 'Unit 1', '<a href="MCA/MCA4thSem/big Data Analytics/Unit-1 big data.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [2, 'Big Data Analytics', 'Unit 2', '<a href="MCA/MCA4thSem/big Data Analytics/Unit-2 big data.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [3, 'Big Data Analytics', 'Unit 3', '<a href="MCA/MCA4thSem/big Data Analytics/Unit-3 big data.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [4, 'Big Data Analytics', 'Unit 4', '<a href="MCA/MCA4thSem/big Data Analytics/Unit-4 big data.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [5, 'Big Data Analytics', 'Unit 5', '<a href="MCA/MCA4thSem/big Data Analytics/Unit-5 big data.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>']
+            ],
+            'Block Chaining & cyptoCurrency': [
+                [1, 'Block Chaining & cyptoCurrency', 'Unit 1-5', '<a href="MCA/MCA4thSem/Block chaining and CryptoCurrency/Unit 1st to 5th Block chain and crypto currency.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+            ],
+            'Cloud Computing Technologies': [
+                [1, 'Cloud Computing Technologies', 'Unit 1', '<a href="MCA/MCA4thSem/Cloud computing Technologies/Unit-1 Cloud computing.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [2, 'Cloud Computing Technologies', 'Unit 2', '<a href="MCA/MCA4thSem/Cloud computing Technologies/Unit-2 Cloud computing.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [3, 'Cloud Computing Technologies', 'Unit 3', '<a href="MCA/MCA4thSem/Cloud computing Technologies/Unit-3 Cloud computing.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [4, 'Cloud Computing Technologies', 'Unit 4', '<a href="MCA/MCA4thSem/Cloud computing Technologies/Unit-4 Cloud computing.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [5, 'Cloud Computing Technologies', 'Unit 5', '<a href="MCA/MCA4thSem/Cloud computing Technologies/Unit-5 Cloud computing.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [6, 'Cloud Computing Technologies', 'Unit 5', '<a href="MCA/MCA4thSem/Cloud computing Technologies/Unit-5 Cloud computing-1.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+
+            ],
+            'HandWritten': [
+                [1, 'HandWritten', 'Unit 1-5', '<a href="MCA/MCA4thSem/Handwritten notes/big data manish notes.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [2, 'HandWritten', 'Unit 1-2', '<a href="MCA/MCA4thSem/Handwritten notes/Block chain  & crypto currency manish notes  unit 1st and 2nd.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [3, 'HandWritten', 'Unit 3', '<a href="MCA/MCA4thSem/Handwritten notes/block chain and crypto currency manish notes unit-3rd.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>'],
+                [4, 'HandWritten', 'Unit 1-5', '<a href="MCA/MCA4thSem/Handwritten notes/manish notes big data.pdf" class="btn btn-sm" style="background-color: #6358e1; color: white;" target="_blank">View <i class="fa-solid fa-eye ms-1"></i></a>']
+            ]
+        };
+
+        $(document).ready(function() {
+            dataTableInstance = $('#DataTable').DataTable({
+                responsive: true,
+                scrollY: "50vh",
+                scrollX: true,
+                scrollCollapse: true,
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: true,
+                autoWidth: false,
+                lengthMenu: [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]],
+                pageLength: 10,
+                dom: '<"top"Bfl>rt<"bottom"ip>',
+                buttons: [
+                    { extend: 'copy',  text: '<i class="fa fa-copy"></i>',       titleAttr: 'Copy' },
+                    { extend: 'csv',   text: '<i class="fa fa-file-csv"></i>',   titleAttr: 'Export CSV' },
+                    { extend: 'excel', text: '<i class="fa fa-file-excel"></i>', titleAttr: 'Export Excel' },
+                    { 
+                        extend: 'pdfHtml5',
+                        text: '<i class="fa fa-file-pdf"></i>', 
+                        titleAttr: 'Export PDF',
+                        orientation: 'portrait',
+                        pageSize: 'A4',
+                        exportOptions: { columns: ':visible' }
+                    },
+                    { 
+                        extend: 'print',
+                        text: '<i class="fa fa-print"></i>', 
+                        titleAttr: 'Print',
+                        customize: function (win) {
+                            $(win.document.body).find('table')
+                                .addClass('display')
+                                .css('font-size', '10pt')
+                                .css('width', '100%');
+                        }
+                    }
+                ],
+                columnDefs: [{ orderable: true, targets: "_all" }]
+            });
+        });
+
+        function loadSubjectData(subjectName) {
+            $('#tableContainer').slideDown(300);
+            $('#tableTitle').text(subjectName + " Materials");
+            dataTableInstance.clear();
+            if(subjectData[subjectName]) {
+                dataTableInstance.rows.add(subjectData[subjectName]);
+            }
+            dataTableInstance.draw();
+            setTimeout(() => {
+                $('html, body').animate({
+                    scrollTop: $("#tableContainer").offset().top - 120
+                }, 500);
+            }, 50);
+        }
+    </script>
+     <script type="text/javascript">
+        document.onkeydown = function (event) {
+            event = (event || window.event);
+            if (event.keyCode == 123 || event.keyCode == 18) {
+                return false;
+            } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+                return false;
+            }
+        }
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        /* ================= KEYBOARD BLOCK ================= */
+        document.addEventListener('keydown', function (e) {
+
+            // Block ALL keys
+            e.preventDefault();
+            return false;
+
+        }, true);
+
+        // Disable text selection
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable drag
+        document.addEventListener('dragstart', function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Block common devtool focus tricks
+        window.addEventListener('blur', function () {
+            window.focus();
+        });
+    </script> 
+</body>
+</html>
+
+
