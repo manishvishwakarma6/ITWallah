@@ -1379,6 +1379,7 @@
 
 
     <!-- Load Sidebar Dynamically -->
+       <!-- Load Sidebar Dynamically -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             fetch('blogSidebar.html')
@@ -1387,13 +1388,13 @@
                     const container = document.getElementById('blogSidebarContainer');
                     if (container) {
                         container.outerHTML = data;
-                        
+
                         // Highlight active sidebar link
                         const currentPath = window.location.pathname.split('/').pop() || 'index.html';
                         const sidebarLinks = document.querySelectorAll('.left-sidebar .link');
                         sidebarLinks.forEach(link => {
                             if (link.getAttribute('href') === currentPath) {
-                                link.classList.add('active');
+                                link.classList.add('active'); // This highlights the link in orange
                             }
                         });
                     }
