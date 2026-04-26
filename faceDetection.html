@@ -785,6 +785,7 @@
 
 
     <!-- Load Sidebar Dynamically -->
+      <!-- Load Sidebar Dynamically -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             fetch('blogSidebar.html')
@@ -799,7 +800,7 @@
                         const sidebarLinks = document.querySelectorAll('.left-sidebar .link');
                         sidebarLinks.forEach(link => {
                             if (link.getAttribute('href') === currentPath) {
-                                link.classList.add('active');
+                                link.classList.add('active'); // This highlights the link in orange
                             }
                         });
                     }
@@ -807,6 +808,7 @@
                 .catch(error => console.error('Error loading sidebar:', error));
         });
     </script>
+
 
     <script type="text/javascript">
         document.onkeydown = function (event) {
