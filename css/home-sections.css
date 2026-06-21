@@ -254,80 +254,37 @@
 }
 
 /* Dark Mode Overrides */
-[data-theme="dark"] .glass-card {
-    background: rgba(20, 20, 20, 0.6) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    color: #f1f1f1 !important;
-}
 
-[data-theme="dark"] .glass-card .text-dark,
-[data-theme="dark"] .glass-card .text-black,
-[data-theme="dark"] .glass-card .text-red {
-    color: #fff !important;
-}
 
-[data-theme="dark"] .glass-card .text-secondary {
-    color: #fff !important;
-}
 
-[data-theme="dark"] .glass-card .text-muted {
-    color: #ddd !important;
-}
 
-[data-theme="dark"] .glass-card .bg-white {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: #fff !important;
-}
 
-[data-theme="dark"] .glass-card .bg-black {
-    background: #333 !important;
-}
 
-[data-theme="dark"] .glass-card .text-teal {
-    color: #4ea8de !important;
-}
 
-[data-theme="dark"] .glass-card i.text-dark {
-    color: #4ea8de !important;
-}
 
-[data-theme="dark"] .stats-number {
-    color: #fff !important;
-}
 
-[data-theme="dark"] .hero-banner-section {
-    background: linear-gradient(135deg, #0f111a 0%, #161224 100%);
-}
 
-[data-theme="dark"] .hero-banner-section .hero-title,
-[data-theme="dark"] .hero-banner-section .typed-text {
-    color: #fff !important;
-}
 
-[data-theme="dark"] .logo-ticker-section,
-[data-theme="dark"] .dive-in-section,
-[data-theme="dark"] .features-section,
-[data-theme="dark"] .testimonial-section,
-[data-theme="dark"] .cta-section {
-    background-color: #121212 !important;
-    color: #fff !important;
-}
 
-[data-theme="dark"] .logo-ticker-section .text-secondary {
-    color: #fff !important;
-}
 
-[data-theme="dark"] .ticker-item {
-    color: #fff;
-}
 
-[data-theme="dark"] .ticker-wrapper::before {
-    background: linear-gradient(to right, #121212, transparent);
-}
 
-[data-theme="dark"] .ticker-wrapper::after {
-    background: linear-gradient(to left, #121212, transparent);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Scroll Animations */
 .animate-on-scroll {
