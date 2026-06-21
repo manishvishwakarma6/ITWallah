@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/png" href="./images/logo.png">
     <title>MCA Semester 3 - IT Wallah</title>
     <!-- Font Awesome for Top Header -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -105,18 +106,16 @@
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                             aria-expanded="false" aria-controls="collapseOne">
-                                            AI & Machine Learning
+                                            Programming Languages
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse"
                                         aria-labelledby="headingOne" data-bs-parent="#coursesAccordion">
                                         <div class="accordion-body p-0">
                                             <ul class="list-unstyled mb-0">
-                                                <li><a class="dropdown-item sub-item" href="#">AI Fundamentals</a></li>
-                                                <li><a class="dropdown-item sub-item" href="#">Machine Learning</a></li>
-                                                <li><a class="dropdown-item sub-item" href="#">Face Detection</a></li>
-                                                <li><a class="dropdown-item sub-item" href="#">ChatBot Development</a>
-                                                </li>
+                                                <li><a class="dropdown-item sub-item" href="javaTutorial.html">Java</a></li>
+                                                <li><a class="dropdown-item sub-item" href="pythonTutorial.html">Python</a></li>
+                                                <li><a class="dropdown-item sub-item" href="plsqlTutorial.html">Pl-SQL</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -128,17 +127,15 @@
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                             aria-expanded="false" aria-controls="collapseTwo">
-                                            Web Development
+                                            DataBases
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="headingTwo" data-bs-parent="#coursesAccordion">
                                         <div class="accordion-body p-0">
                                             <ul class="list-unstyled mb-0">
-                                                <li><a class="dropdown-item sub-item" href="#">Web RTC & Web Socket</a>
-                                                </li>
-                                                <li><a class="dropdown-item sub-item" href="#">Detection</a></li>
-                                                <li><a class="dropdown-item sub-item" href="#">PDF Viewer</a></li>
+                                                <li><a class="dropdown-item sub-item" href="sqlTutorial.html">SQL</a></li>
+                                                <li><a class="dropdown-item sub-item" href="mysqlTutorial.html">MySQL</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -150,16 +147,16 @@
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                             aria-expanded="false" aria-controls="collapseThree">
-                                            Data Science
+                                            Blogs
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#coursesAccordion">
                                         <div class="accordion-body p-0">
                                             <ul class="list-unstyled mb-0">
-                                                <li><a class="dropdown-item sub-item" href="#">Data Analysis</a></li>
-                                                <li><a class="dropdown-item sub-item" href="#">Python for Data</a></li>
-                                                <li><a class="dropdown-item sub-item" href="#">SQL & Databases</a></li>
+                                                <li><a class="dropdown-item sub-item" href="zohobook.html">Zoho Book</a></li>
+                                                <li><a class="dropdown-item sub-item" href="faceDetection.html">Face Detection</a></li>
+                                                <li><a class="dropdown-item sub-item" href="chatbot.html">ChatBot</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -203,8 +200,8 @@
                                         Tutorials
                                     </a>
                                     <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdownCase">
-                                        <li><a class="dropdown-item" href="#">Java</a></li>
-                                        <li><a class="dropdown-item" href="#">Python</a></li>
+                                        <li><a class="dropdown-item" href="javaTutorial.html">Java</a></li>
+                                        <li><a class="dropdown-item" href="pythonTutorial.html">Python</a></li>
 
                                         <li class="dropdown-submenu">
                                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarSubSubDropdown"
@@ -212,11 +209,11 @@
                                                 SQL & Pl-SQL
                                             </a>
                                             <ul class="dropdown-menu border-0" aria-labelledby="navbarSubSubDropdown">
-                                                <li><a class="dropdown-item" href="#">SQL</a></li>
-                                                <li><a class="dropdown-item" href="#">PL-SQL</a></li>
+                                                <li><a class="dropdown-item" href="sqlTutorial.html">SQL</a></li>
+                                                <li><a class="dropdown-item" href="plsqlTutorial.html">PL-SQL</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item" href="#">MySQL</a></li>
+                                        <li><a class="dropdown-item" href="mysqlTutorial.html">MySQL</a></li>
                                     </ul>
                                 </li>
 
@@ -269,16 +266,7 @@
                     </div>
 
                     <div class="navbar__right mt-4 mt-xl-0 btn-book-wrapper">
-                        <!-- Light/Dark Mode Switch -->
-                        <div class="theme-toggle">
-                            <label class="theme-toggle-switch">
-                                <input type="checkbox" id="themeSwitch">
-                                <span class="theme-toggle-slider">
-                                    <span class="theme-toggle-icon">☀️</span>
-                                    <span class="theme-toggle-icon">🌙</span>
-                                </span>
-                            </label>
-                        </div>
+                        
 
                         <a href="contact.html" class="btn-book">
                             Get In Touch
@@ -419,7 +407,11 @@
                     <h5 class="footer-title">Courses & Tutorials</h5>
                     <ul class="list-unstyled footer-links">
                         <li><a href="courses.html">Courses</a></li>
-                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="javaTutorial.html">Java</a></li>
+                        <li><a href="pythonTutorial.html">Python</a></li>
+                        <li><a href="sqlTutorial.html">SQL</a></li>
+                        <li><a href="plsqlTutorial.html">PL-SQL</a></li>
+                        <li><a href="mysqlTutorial.html">MySQL</a></li>
                     </ul>
                 </div>
 
@@ -428,9 +420,9 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <h5 class="footer-title">Blogs</h5>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#">Face Detection</a></li>
-                        <li><a href="#">Zoho Book Invoice</a></li>
-                        <li><a href="#">ChatBot</a></li>
+                        <li><a href="faceDetection.html">Face Detection</a></li>
+                        <li><a href="zohobook.html">Zoho Book Invoice</a></li>
+                        <li><a href="chatbot.html">ChatBot</a></li>
                     </ul>
                 </div>
 
@@ -481,8 +473,8 @@
             <hr>
             <div class="text-center copyright">
                 Copyright 2026. IT Wallah All rights reserved |
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Terms and Conditions</a>
+                <a href="https://drive.google.com/file/d/1NP0j8AjLC1wYlf_NOZiOxnXpjDMkeuoA/view">Privacy Policy</a> |
+                <a href="https://drive.google.com/file/d/10mfEg1Vp9NNO3KsVB1X7Mw7ObRjpemoO/view">Terms and Conditions</a>
             </div>
         </div>
 
@@ -606,44 +598,7 @@
             }, 50);
         }
     </script>
-     <script type="text/javascript">
-        document.onkeydown = function (event) {
-            event = (event || window.event);
-            if (event.keyCode == 123 || event.keyCode == 18) {
-                return false;
-            } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
-                return false;
-            }
-        }
-        document.addEventListener('contextmenu', event => event.preventDefault());
-
-        /* ================= KEYBOARD BLOCK ================= */
-        document.addEventListener('keydown', function (e) {
-
-            // Block ALL keys
-            e.preventDefault();
-            return false;
-
-        }, true);
-
-        // Disable text selection
-        document.addEventListener('selectstart', function (e) {
-            e.preventDefault();
-            return false;
-        });
-
-        // Disable drag
-        document.addEventListener('dragstart', function (e) {
-            e.preventDefault();
-            return false;
-        });
-
-        // Block common devtool focus tricks
-        window.addEventListener('blur', function () {
-            window.focus();
-        });
-    </script> 
-</body>
+     </body>
 </html>
 
 
