@@ -411,23 +411,6 @@
 
  /* ----- THEME TOGGLE SWITCH ----- */
  
-
- 
-
- 
-
- 
-
- 
-
- input:checked+
-
- input:focus+
-
- input:checked+
-
- 
-
  /* Mobile specific styling */
  @media (max-width: 1199px) {
      .navbar-brand {
