@@ -101,6 +101,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Handle Active Nav Link Dynamically
+    const currentLocation = location.pathname.split('/').pop() || 'index.html';
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        const link = item.querySelector('a');
+        if (link && link.getAttribute('href') === currentLocation) {
+            item.classList.add('active');
+        }
+    });
+
     // 4. Dark/Light Theme Switching Logic
     const themeSwitch = document.getElementById('themeSwitch');
 
