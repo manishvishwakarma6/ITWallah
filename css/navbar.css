@@ -104,23 +104,7 @@
      --hamburger-color: #ffffff;
  }
 
- [data-theme="dark"] {
-     --bg-gradient: #000000;
-     --text-color: #ffffff;
-     --nav-bg: rgba(0, 0, 0, 0.8);
-     --nav-link-color: #ffffff;
-     --nav-pill-bg: rgba(255, 255, 255, 0.05);
-     --nav-pill-border: rgba(255, 255, 255, 0.1);
-     --dropdown-bg: #121212;
-     --dropdown-item-color: #ffffff;
-     --btn-book-bg: rgba(255, 255, 255, 0.05);
-     --btn-book-border: rgba(255, 255, 255, 0.1);
-     --btn-book-color: #ffffff;
-     --btn-book-hover-bg: rgba(255, 255, 255, 0.15);
-     --overlay-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
-     --hero-text-color: #ffffff;
-     --hamburger-color: #ffffff;
- }
+ 
 
  body {
      font-family: 'Inter', sans-serif;
@@ -426,75 +410,23 @@
  }
 
  /* ----- THEME TOGGLE SWITCH ----- */
- .theme-toggle {
-     display: flex;
-     align-items: center;
-     margin-right: 15px;
- }
+ 
 
- .theme-toggle-switch {
-     position: relative;
-     display: inline-block;
-     width: 50px;
-     height: 26px;
- }
+ 
 
- .theme-toggle-switch input {
-     opacity: 0;
-     width: 0;
-     height: 0;
- }
+ 
 
- .theme-toggle-slider {
-     position: absolute;
-     cursor: pointer;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: rgba(255, 255, 255, 0.2);
-     backdrop-filter: blur(12px);
-     -webkit-backdrop-filter: blur(12px);
-     border: 1px solid rgba(255, 255, 255, 0.3);
-     transition: .4s;
-     border-radius: 34px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 0 5px;
- }
+ 
 
- .theme-toggle-slider:before {
-     position: absolute;
-     content: "";
-     height: 20px;
-     width: 20px;
-     left: 2px;
-     bottom: 2px;
-     background-color: white;
-     transition: .4s;
-     border-radius: 50%;
-     z-index: 2;
- }
+ 
 
- input:checked+.theme-toggle-slider {
-     background-color: rgba(255, 255, 255, 0.1);
- }
+ input:checked+
 
- input:focus+.theme-toggle-slider {
-     box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
- }
+ input:focus+
 
- input:checked+.theme-toggle-slider:before {
-     transform: translateX(24px);
-     background-color: #2a2a35;
- }
+ input:checked+
 
- .theme-toggle-icon {
-     font-size: 12px;
-     z-index: 1;
-     line-height: 1;
- }
+ 
 
  /* Mobile specific styling */
  @media (max-width: 1199px) {
@@ -551,12 +483,7 @@
          gap: 15px;
      }
 
-     .theme-toggle {
-         margin-right: 0;
-         justify-content: flex-end;
-         width: 100%;
-         padding-right: 10px;
-     }
+     
 
      .btn-book {
          width: 100%;
